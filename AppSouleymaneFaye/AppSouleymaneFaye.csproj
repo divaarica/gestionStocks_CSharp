@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32DA222E-4EE7-464C-B15B-3500648CAC3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppSouleymaneFaye</RootNamespace>
+    <AssemblyName>AppSouleymaneFaye</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConnexion.Designer.cs">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmApprovisionnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmApprovisionnement.Designer.cs">
+      <DependentUpon>FrmApprovisionnement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBleu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBleu.Designer.cs">
+      <DependentUpon>FrmBleu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategorie.Designer.cs">
+      <DependentUpon>FrmCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLayout.Designer.cs">
+      <DependentUpon>FrmLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrintProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrintProduit.Designer.cs">
+      <DependentUpon>FrmPrintProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProduit.Designer.cs">
+      <DependentUpon>FrmProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecherches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecherches.Designer.cs">
+      <DependentUpon>FrmRecherches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUtilisateur.Designer.cs">
+      <DependentUpon>FrmUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVert.Designer.cs">
+      <DependentUpon>FrmVert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ApprovisionnementBis.cs">
+      <DependentUpon>ModelKirene.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Categorie.cs">
+      <DependentUpon>ModelKirene.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ListeSelected.cs" />
+    <Compile Include="Model\ModelKirene.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelKirene.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelKirene.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelKirene.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelKirene.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelKirene.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Produit.cs">
+      <DependentUpon>ModelKirene.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Profil.cs">
+      <DependentUpon>ModelKirene.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\rapportListeProduit.cs" />
+    <Compile Include="Model\Utilisateur.cs">
+      <DependentUpon>ModelKirene.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\VRechercheProduit.cs">
+      <DependentUpon>ModelKirene.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\rptListeProduit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListeProduit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\CheckEnter.cs" />
+    <Compile Include="Util\Crypt.cs" />
+    <Compile Include="Util\LoadComboBox.cs" />
+    <EmbeddedResource Include="FrmConnexion.resx">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmApprovisionnement.resx">
+      <DependentUpon>FrmApprovisionnement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBleu.resx">
+      <DependentUpon>FrmBleu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategorie.resx">
+      <DependentUpon>FrmCategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLayout.resx">
+      <DependentUpon>FrmLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrintProduit.resx">
+      <DependentUpon>FrmPrintProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProduit.resx">
+      <DependentUpon>FrmProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecherches.resx">
+      <DependentUpon>FrmRecherches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUtilisateur.resx">
+      <DependentUpon>FrmUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVert.resx">
+      <DependentUpon>FrmVert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\rptListeProduit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListeProduit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\ModelKirene.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelKirene.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\ModelKirene.edmx.diagram">
+      <DependentUpon>ModelKirene.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\ModelKirene.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelKirene.edmx</DependentUpon>
+      <LastGenOutput>ModelKirene.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ModelKirene.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelKirene.edmx</DependentUpon>
+      <LastGenOutput>ModelKirene.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

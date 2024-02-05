@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BdKireneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ApprovisionnementBis">
+    <Key>
+      <PropertyRef Name="idAppro" />
+    </Key>
+    <Property Name="idAppro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeProduit" Type="nvarchar" MaxLength="5" />
+    <Property Name="QteAppro" Type="int" />
+    <Property Name="QteRestante" Type="int" />
+    <Property Name="DatePeremption" Type="date" />
+    <Property Name="DateAppro" Type="date" />
+  </EntityType>
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="IdCategorie" />
+    </Key>
+    <Property Name="IdCategorie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codecategorie" Type="nvarchar" MaxLength="4" />
+    <Property Name="LibelleCategorie" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Produit">
+    <Key>
+      <PropertyRef Name="IdProduit" />
+    </Key>
+    <Property Name="IdProduit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeProduit" Type="nvarchar" MaxLength="5" />
+    <Property Name="DesignationProduit" Type="nvarchar" MaxLength="100" />
+    <Property Name="PU" Type="float" />
+    <Property Name="QteMin" Type="int" />
+    <Property Name="QteCri" Type="int" />
+    <Property Name="CodeCategorie" Type="nvarchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profil">
+    <Key>
+      <PropertyRef Name="idProfil" />
+    </Key>
+    <Property Name="idProfil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codeProfil" Type="nvarchar" MaxLength="20" />
+    <Property Name="libelleProfil" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Utilisateur">
+    <Key>
+      <PropertyRef Name="idUt" />
+    </Key>
+    <Property Name="idUt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifiantUt" Type="nvarchar" MaxLength="50" />
+    <Property Name="motDePasse" Type="nvarchar" MaxLength="250" />
+    <Property Name="codeProfil" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'BdKirene.dbo.VRechercheProduit' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="VRechercheProduit">
+    <Key>
+      <PropertyRef Name="IdProduit" />
+    </Key>
+    <Property Name="DesignationProduit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Codecategorie" Type="nvarchar" MaxLength="4" />
+    <Property Name="LibelleCategorie" Type="nvarchar" MaxLength="100" />
+    <Property Name="IdProduit" Type="int" Nullable="false" />
+    <Property Name="PU" Type="float" />
+    <Property Name="QteMin" Type="int" />
+    <Property Name="QteCri" Type="int" />
+    <Property Name="CodeProduit" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityContainer Name="BdKireneModelStoreContainer">
+    <EntitySet Name="ApprovisionnementBis" EntityType="Self.ApprovisionnementBis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categorie" EntityType="Self.Categorie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produit" EntityType="Self.Produit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Profil" EntityType="Self.Profil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Utilisateur" EntityType="Self.Utilisateur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VRechercheProduit" EntityType="Self.VRechercheProduit" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VRechercheProduit].[DesignationProduit] AS [DesignationProduit], 
+    [VRechercheProduit].[Codecategorie] AS [Codecategorie], 
+    [VRechercheProduit].[LibelleCategorie] AS [LibelleCategorie], 
+    [VRechercheProduit].[IdProduit] AS [IdProduit], 
+    [VRechercheProduit].[PU] AS [PU], 
+    [VRechercheProduit].[QteMin] AS [QteMin], 
+    [VRechercheProduit].[QteCri] AS [QteCri], 
+    [VRechercheProduit].[CodeProduit] AS [CodeProduit]
+    FROM [dbo].[VRechercheProduit] AS [VRechercheProduit]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
