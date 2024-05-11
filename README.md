@@ -1,4 +1,4 @@
-Gestion de Stock en C# avec Windows Forms
+## Gestion de Stock en C# avec Windows Forms
 
 Cette application de gestion de stock est développée en utilisant C# avec Windows Forms dans l'environnement .NET. Elle fournit une solution pour la gestion efficace des stocks, 
 que ce soit pour un petit magasin ou une entreprise plus importante. L'application permet aux utilisateurs de suivre les niveaux de stock, d'ajouter de nouveaux articles, de modifier 
@@ -8,9 +8,9 @@ Grâce à une interface utilisateur conviviale, les utilisateurs peuvent navigue
 Les fonctionnalités avancées incluent la possibilité de définir des seuils de réapprovisionnement pour les articles, de recevoir des notifications lorsque les stocks sont bas, 
 et de générer des rapports détaillés sur les ventes et les tendances de stock.
 
-Quelques images de l'interface
+## Quelques images de l'interface:
 
-***** Vendeur *****
+## Vendeur
 
 ![gtConnVendeur](https://github.com/divaarica/appTer/assets/151394040/620884eb-3824-4c54-881d-4f106c36f30b)
 
@@ -27,7 +27,7 @@ Quelques images de l'interface
 ![gtFactureVente](https://github.com/divaarica/appTer/assets/151394040/ee5f6caf-eeee-476b-b6d5-addd0e28a1b7)
 
 
-***** Gestionnaire *****
+## Gestionnaire
 
 
 ![gtConn](https://github.com/divaarica/appTer/assets/151394040/6557b3d7-aa05-4f50-9f21-932fb2a885db)
